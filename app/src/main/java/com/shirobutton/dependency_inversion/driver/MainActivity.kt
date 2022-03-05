@@ -1,4 +1,4 @@
-package com.shirobutton.dependency_inversion
+package com.shirobutton.dependency_inversion.driver
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

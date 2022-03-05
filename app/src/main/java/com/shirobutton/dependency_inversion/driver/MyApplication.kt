@@ -1,4 +1,4 @@
-package com.shirobutton.dependency_inversion
+package com.shirobutton.dependency_inversion.driver
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
