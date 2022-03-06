@@ -3,12 +3,13 @@ package com.shirobutton.dependency_inversion.driver
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.shirobutton.dependency_inversion.adapter.MainController
+import com.shirobutton.dependency_inversion.adapter.MainReceiver
 import com.shirobutton.dependency_inversion.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainReceiver {
 
     @Inject
     lateinit var controller: MainController
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun onReceiveNumber(number: Int){
+    override fun onReceiveNumber(number: Int){
         this.number = number
         binding.textView.text = number.toString()
     }
