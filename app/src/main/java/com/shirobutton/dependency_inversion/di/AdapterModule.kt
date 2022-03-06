@@ -2,6 +2,8 @@ package com.shirobutton.dependency_inversion.di
 
 import com.shirobutton.dependency_inversion.adapter.MainController
 import com.shirobutton.dependency_inversion.adapter.MainControllerImpl
+import com.shirobutton.dependency_inversion.adapter.MainPresenter
+import com.shirobutton.dependency_inversion.adapter.MainPresenterImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,4 +16,8 @@ abstract class AdapterModule {
     @ActivityScoped
     @Binds
     abstract fun bindMainController(mainController: MainControllerImpl): MainController
+
+    @ActivityScoped
+    @Binds
+    abstract fun bindMainPresenter(mainPresenterImpl: MainPresenterImpl): MainPresenter
 }
