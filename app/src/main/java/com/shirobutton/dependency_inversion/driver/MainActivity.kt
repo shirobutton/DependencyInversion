@@ -13,16 +13,22 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var controller: MainController
 
-    private var number: Int = 0
+    lateinit var binding: ActivityMainBinding
+
+    var number: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         binding.textView.text = number.toString()
         binding.button.setOnClickListener {
-            number = controller.onIncrementButtonClick(number)
-            binding.textView.text = number.toString()
+            controller.onIncrementButtonClick(number)
         }
         setContentView(binding.root)
+    }
+
+    fun onReceiveNumber(number: Int){
+        this.number = number
+        binding.textView.text = number.toString()
     }
 }
