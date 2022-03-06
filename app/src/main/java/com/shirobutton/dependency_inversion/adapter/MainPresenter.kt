@@ -1,5 +1,5 @@
 package com.shirobutton.dependency_inversion.adapter
 
-interface MainPresenter {
-    fun setNumber(number: Int)
-}
+import com.shirobutton.dependency_inversion.application.IncrementUseCaseOutputBoundary
+
+interface MainPresenter: IncrementUseCaseOutputBoundary

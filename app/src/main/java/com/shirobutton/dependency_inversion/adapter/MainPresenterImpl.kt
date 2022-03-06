@@ -5,7 +5,8 @@ import javax.inject.Inject
 class MainPresenterImpl @Inject constructor(
     private val mainReceiver: MainReceiver
 ): MainPresenter {
-    override fun setNumber(number: Int) {
+
+    override fun incrementOutput(number: Int) {
         mainReceiver.onReceiveNumber(number)
     }
 }
