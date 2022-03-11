@@ -7,12 +7,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.shirobutton.dependency_inversion.adapter.MainController
 import com.shirobutton.dependency_inversion.adapter.MainPresenter
-import com.shirobutton.dependency_inversion.adapter.MainReceiver
 import com.shirobutton.dependency_inversion.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
