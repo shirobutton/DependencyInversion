@@ -1,7 +1,6 @@
 package com.shirobutton.dependency_inversion.di
 
-import com.shirobutton.dependency_inversion.application.IncrementUseCase
-import com.shirobutton.dependency_inversion.application.IncrementUseCaseInteractor
+import com.shirobutton.dependency_inversion.application.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,4 +16,14 @@ abstract class ApplicationModule {
     abstract fun bindIncrementUseCase(
         incrementUseCase: IncrementUseCaseInteractor
     ): IncrementUseCase
+
+    @Binds
+    abstract fun bindNumberSubject(
+        numberSubjectImpl: NumberSubjectImpl
+    ): NumberSubject
+
+    @Binds
+    abstract fun bindIncrementUseCaseOutputBoundary(
+        numberSubjectImpl: NumberSubjectImpl
+    ): IncrementUseCaseOutputBoundary
 }

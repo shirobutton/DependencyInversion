@@ -22,10 +22,4 @@ abstract class AdapterModule {
     @ActivityScoped
     @Binds
     abstract fun bindMainPresenter(mainPresenterImpl: MainPresenterImpl): MainPresenter
-
-    @ActivityScoped
-    @Binds
-    abstract fun bindIncrementUseCaseOutputBoundary(
-        mainPresenter: MainPresenter
-    ): IncrementUseCaseOutputBoundary
 }
